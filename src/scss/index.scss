@@ -1,0 +1,169 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$primary-color: #fff;
+$product-background: rgba(0, 0, 0, 0.75);
+$center: 0 auto;
+$bottom : 25px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', Arial;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+}
+
+#page {
+  background-color: $primary-color;
+  margin: 1.3rem auto;
+  width: 100%;
+  @media all and (min-width: 480px) {
+    width: 900px;
+  }
+
+  .top {
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      margin: 0;
+
+      a {
+        color: lightblue;
+      }
+    }
+  }
+  
+  #main-product {
+    margin: 0 0 $bottom 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media all and (min-width: 480px) and (max-width: 768px) {
+      flex-direction: row;
+    }
+
+    picture {
+      margin: $center;
+      img {
+        margin: $center;
+      }
+    }
+
+    .product-main {
+      background: $product-background;
+      padding: $bottom;
+      color: $primary-color;
+      width: 320px;
+      margin: $center;
+      @media all and (min-width: 480px) {
+        width: 480px;
+        height: 360px;
+        
+      }
+      @media all and (min-width: 768px) {
+        height: 33%;
+        width: 768px;
+      }
+      @media all and (min-width: 900px) {
+        height: 33%;
+        width: 900px;
+      }
+      
+      h2 {
+        font-size: 1rem;
+        margin: 0;
+        @media all and (min-width: 480px) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: .8rem;
+        margin-top: .5rem;
+        @media all and (min-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#other_products {
+  margin: 0 0 $bottom 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    align-items: center;
+  }
+  @media all and (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  article {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
+    font-size: 80%;
+    margin: 0 auto .5rem auto;
+    @media all and (min-width: 480px) and (max-width: 768px) {
+      flex-direction: row;
+      width: 100%;
+    }
+    img {
+      width: 206px;
+    }
+
+    .product-desc {
+      padding-bottom: $bottom * 2;
+      background: $product-background;
+      padding: 5px 10px;
+      color: $primary-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      height: 15rem;
+      @media all and (min-width: 480px) {
+        height: auto;
+      }
+
+      h3 {
+        font-size: 1rem;
+        @media all and (min-width: 480px) and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .description {
+        flex: 1;
+        margin: 0;
+        @media all and (min-width: 480px) and (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+
+      .btn {
+        margin-top: 1em;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 1em;
+        background-color: cornflowerblue;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        white-space: nowrap;
+        bottom: 10px;
+      }
+    }
+  }
+}
